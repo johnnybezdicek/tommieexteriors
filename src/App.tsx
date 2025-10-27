@@ -129,18 +129,25 @@ function App() {
                 required
               />
               <input
+                type="tel"
+                placeholder="Phone Number"
+                className="w-full p-3 border border-input rounded-md"
+                required
+              />
+              <input
                 type="text"
-                placeholder="Address"
+                placeholder="Property Address"
                 className="w-full p-3 border border-input rounded-md"
                 required
               />
               <select className="w-full p-3 border border-input rounded-md" required>
-                <option value="">Select Service</option>
-                <option value="clearout">Gutter Clearout</option>
-                <option value="guard">Gutter Guard Installation</option>
+                <option value="">Select Service Type</option>
+                <option value="gutter-cleaning">Gutter Cleaning</option>
+                <option value="gutter-guard">Gutter Guard Installation</option>
+                <option value="christmas-lights">Christmas Lights Installation</option>
               </select>
               <textarea
-                placeholder="Message"
+                placeholder="Additional Details"
                 className="w-full p-3 border border-input rounded-md resize-none"
                 rows={4}
               ></textarea>

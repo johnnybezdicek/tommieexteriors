@@ -1,0 +1,15 @@
+{
+  "name": "tommie-exterior-services",
+  "static_sites": [
+    {
+      "name": "site",
+      "source_dir": "/",
+      "build_command": "npm run build",
+      "output_dir": "dist",
+      "github": {
+        "repo": "johnnybezdicek/tommieexteriors",
+        "branch": "main"
+      }
+    }
+  ]
+}
