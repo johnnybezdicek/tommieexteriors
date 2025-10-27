@@ -1,5 +1,5 @@
 import { Button } from "./components/ui/button"
-import { Home, Shield, Phone } from "lucide-react"
+import { Home, Shield, Phone, User, Phone as PhoneIcon, MapPin, Wrench, MessageSquare } from "lucide-react"
 
 function App() {
   return (
@@ -115,46 +115,134 @@ function App() {
       {/* Contact */}
       <section className="bg-muted py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Contact Us</h2>
-          <div className="max-w-md mx-auto">
-            <p className="text-center mb-8">
-              <Phone className="inline h-6 w-6 mr-2" />
-              Call us: (123) 456-7890
-            </p>
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full p-3 border border-input rounded-md"
-                required
-              />
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full p-3 border border-input rounded-md"
-                required
-              />
-              <input
-                type="text"
-                placeholder="Property Address"
-                className="w-full p-3 border border-input rounded-md"
-                required
-              />
-              <select className="w-full p-3 border border-input rounded-md" required>
-                <option value="">Select Service Type</option>
-                <option value="gutter-cleaning">Gutter Cleaning</option>
-                <option value="gutter-guard">Gutter Guard Installation</option>
-                <option value="christmas-lights">Christmas Lights Installation</option>
-              </select>
-              <textarea
-                placeholder="Additional Details"
-                className="w-full p-3 border border-input rounded-md resize-none"
-                rows={4}
-              ></textarea>
-              <Button type="submit" className="w-full">
-                Send Message
-              </Button>
-            </form>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Ready to keep your gutters happy? Contact us today for professional service in St. Thomas.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Contact Info */}
+              <div className="space-y-8">
+                <div className="bg-card p-8 rounded-xl shadow-lg border">
+                  <h3 className="text-2xl font-semibold mb-6 flex items-center">
+                    <Phone className="h-6 w-6 mr-3 text-primary" />
+                    Contact Information
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-primary/10 p-3 rounded-full">
+                        <Phone className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Phone</p>
+                        <p className="text-muted-foreground">(123) 456-7890</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-primary/10 p-3 rounded-full">
+                        <MapPin className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Service Area</p>
+                        <p className="text-muted-foreground">St. Thomas, VI</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-primary/10 p-3 rounded-full">
+                        <Shield className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium">Licensed & Insured</p>
+                        <p className="text-muted-foreground">Your home is protected</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-primary to-purple-600 text-white p-8 rounded-xl shadow-lg">
+                  <h3 className="text-2xl font-semibold mb-4">Why Choose Tommie?</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
+                      <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      Reliable, local service
+                    </li>
+                    <li className="flex items-center">
+                      <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      Competitive pricing
+                    </li>
+                    <li className="flex items-center">
+                      <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
+                      100% satisfaction guarantee
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Contact Form */}
+              <div className="bg-card p-8 rounded-xl shadow-lg border">
+                <h3 className="text-2xl font-semibold mb-6 flex items-center">
+                  <MessageSquare className="h-6 w-6 mr-3 text-primary" />
+                  Send us a Message
+                </h3>
+                <form className="space-y-6">
+                  <div className="relative">
+                    <User className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      className="w-full pl-10 pr-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                      required
+                    />
+                  </div>
+
+                  <div className="relative">
+                    <PhoneIcon className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      className="w-full pl-10 pr-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                      required
+                    />
+                  </div>
+
+                  <div className="relative">
+                    <MapPin className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
+                    <input
+                      type="text"
+                      placeholder="Property Address"
+                      className="w-full pl-10 pr-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                      required
+                    />
+                  </div>
+
+                  <div className="relative">
+                    <Wrench className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
+                    <select className="w-full pl-10 pr-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors appearance-none bg-white" required>
+                      <option value="">Select Service Type</option>
+                      <option value="gutter-cleaning">Gutter Cleaning</option>
+                      <option value="gutter-guard">Gutter Guard Installation</option>
+                      <option value="christmas-lights">Christmas Lights Installation</option>
+                    </select>
+                  </div>
+
+                  <div className="relative">
+                    <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
+                    <textarea
+                      placeholder="Additional Details"
+                      className="w-full pl-10 pr-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
+                      rows={4}
+                    ></textarea>
+                  </div>
+
+                  <Button type="submit" className="w-full h-12 text-lg font-semibold hover:shadow-lg transition-shadow">
+                    Send Message
+                  </Button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>
